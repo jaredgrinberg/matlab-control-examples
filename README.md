@@ -98,7 +98,3 @@ These examples demonstrate:
 - **macOS** - Use `casadi_3.6.7_osx_arm64`
 
 The `setup.m` file automatically detects your platform and adds the appropriate CasADi version to your path.
-
-## License
-
-MIT License
