@@ -1,0 +1,16 @@
+# MATLAB
+*.asv
+*.mex*
+*.mat
+*.slx.autosave
+*.slxc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.code-workspace
+# Dependencies (users install their own)
+casadi*/
