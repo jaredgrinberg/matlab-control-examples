@@ -18,7 +18,6 @@ Collection of MATLAB control theory examples including LQR controllers, trajecto
 
 ### Required
 - MATLAB with Symbolic Math Toolbox
-- [Robotics Toolbox](https://github.com/petercorke/robotics-toolbox-matlab) (for visualization)
 
 ### Included
 - **CasADi** - Multiple platform versions included (Linux, Windows, macOS)
