@@ -14,3 +14,4 @@ Thumbs.db
 *.code-workspace
 # Dependencies (users install their own)
 casadi*/
+spatial_v2_extended/
