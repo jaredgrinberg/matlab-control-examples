@@ -28,7 +28,7 @@ Collection of MATLAB control theory examples including LQR controllers, trajecto
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/matlab-control-examples.git
+   git clone https://github.com/jaredgrinberg/matlab-control-examples.git
    ```
 
 2. Open MATLAB and navigate to the repo directory
