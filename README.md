@@ -19,30 +19,38 @@ Collection of MATLAB control theory examples including LQR controllers, trajecto
 ### Required
 - MATLAB with Symbolic Math Toolbox
 
-### Included
-- **CasADi** - Multiple platform versions included (Linux, Windows, macOS)
-- **Spatial_v2_extended** - Spatial vector algebra library
+### For Trajectory Optimization Projects
+**CasADi** - Download from [https://web.casadi.org/get/](https://web.casadi.org/get/)
+- Choose your platform (Windows, Linux, or macOS)
+- Extract to the root directory of this repo
 
-## Quick Start
+**Spatial_v2_extended** - Download from [https://github.com/ROAM-Lab-ND/spatial_v2_extended](https://github.com/ROAM-Lab-ND/spatial_v2_extended)
+- Clone or download ZIP
+- Place in the root directory of this repo
+
+## Installation
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/jaredgrinberg/matlab-control-examples.git
+   cd matlab-control-examples
    ```
 
-2. Open MATLAB and navigate to the repo directory
+2. Download dependencies:
+   - **CasADi**: Download for your platform and extract here
+   - **Spatial_v2**: Clone the repo or download ZIP and place here
 
-3. Run any example:
+3. Update `setup.m` with correct CasADi folder name:
+   ```matlab
+   % In setup.m, update the path to match your CasADi version
+   addpath(genpath('casadi-YOUR-VERSION-HERE'))
+   addpath(genpath('spatial_v2_extended'))
+   ```
+
+4. Run any example:
    ```matlab
    cd Cart_Pole_LQR
    MAIN_cart_pole_dlqr
-   ```
-
-   For trajectory optimization examples:
-   ```matlab
-   cd TrajOpt_Cart_Pole
-   run ../setup.m  % Initialize CasADi
-   MAIN_cartpole
    ```
 
 ## Project Structure
@@ -55,10 +63,8 @@ matlab-control-examples/
 ├── Quadrotor_LQR/                    # LQR quadrotor control
 ├── TrajOpt_Cart_Pole/                # Trajectory optimization examples
 ├── TrajOpt_2_DOF_Cart_Pole/          
-├── casadi-3.6.4-linux64-matlab2018b/     # CasADi for Linux
-├── casadi-3.6.4-windows64-matlab2018b/   # CasADi for Windows
-├── casadi_3.6.7_osx_arm64/               # CasADi for macOS
-├── spatial_v2_extended/              # Spatial vector library
+├── casadi-YOUR-VERSION/              # Download and place here
+├── spatial_v2_extended/              # Clone and place here
 ├── setup.m                          # Dependency initialization
 └── README.md
 ```
@@ -93,8 +99,9 @@ These examples demonstrate:
 
 ## Platform Support
 
-- **Windows** - Use `casadi-3.6.4-windows64-matlab2018b`
-- **Linux** - Use `casadi-3.6.4-linux64-matlab2018b`
-- **macOS** - Use `casadi_3.6.7_osx_arm64`
+After downloading CasADi for your platform, update the path in `setup.m`:
+- **Windows** - `casadi-windows64-matlabXXXX`
+- **Linux** - `casadi-linux64-matlabXXXX` 
+- **macOS** - `casadi-osxXX-matlabXXXX`
 
-The `setup.m` file automatically detects your platform and adds the appropriate CasADi version to your path.
+The `setup.m` file adds the appropriate CasADi version to your MATLAB path.
